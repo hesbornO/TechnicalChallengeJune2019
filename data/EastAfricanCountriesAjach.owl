@@ -1,0 +1,573 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#borders -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#borders"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#isCapitalOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#isCapitalOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#City"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#isLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#isLocatedIn">
+        <rdfs:comment>City located in a country</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Country"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#County"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#County"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#isPartOf">
+        <rdfs:comment>County is part of a country</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#City"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#County"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Population -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Population">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Place"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#capitalCityLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#capitalCityLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#City"/>
+        <rdfs:range rdf:resource="&xsd;Name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="&owl;topDataProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Country"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#City">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#County -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#County">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Place -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Place"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Abim -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Abim">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">17400</Population>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kalaki"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kalaki"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Adilang -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Adilang">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">9896</Population>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Agago"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Agago"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Agago -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Agago">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#County"/>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Uganda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Amuria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Amuria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">5400</Population>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kalaki"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kalaki"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Arua -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Arua">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#County"/>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Uganda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Arua_Town -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Arua_Town">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">43930</Population>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Arua"/>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Arua"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Bungoma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Bungoma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#County"/>
+        <Population rdf:datatype="&xsd;integer">22703</Population>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Bungoma"/>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Buvuma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Buvuma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">42500</Population>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kalungu"/>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kalungu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#DRC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#DRC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Country"/>
+        <borders rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Uganda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Ethiopia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Ethiopia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Country"/>
+        <borders rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Gomba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Gomba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">3011</Population>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kalungu"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kalungu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Jomvu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Jomvu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">102566</Population>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Mombasa"/>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Mombasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kajiado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kajiado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#County"/>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kakuuto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kakuuto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#County"/>
+        <Population rdf:datatype="&xsd;integer">12806</Population>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kakuuto"/>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Uganda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kalaki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kalaki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#County"/>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kalaki"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kalaki"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kalungu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kalungu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#County"/>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Uganda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kampala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kampala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#City"/>
+        <capitalCityLocation rdf:datatype="&xsd;string">0.3476ยบ N, 32.5825ยบE</capitalCityLocation>
+        <Population rdf:datatype="&xsd;integer">1350000</Population>
+        <isCapitalOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Uganda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kasasa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kasasa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">12806</Population>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kakuuto"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kakuuto"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kenya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kenya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Country"/>
+        <borders rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Uganda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kibanda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kibanda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">8507</Population>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kakuuto"/>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kakuuto"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kisauni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kisauni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">194065</Population>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Mombasa"/>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Mombasa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kisumu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kisumu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#County"/>
+        <Population rdf:datatype="&xsd;integer">145764</Population>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kenya"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kisumu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kisumu_Central -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kisumu_Central">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">168892</Population>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kisumu"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kisumu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Loitoktok -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Loitoktok">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">95430</Population>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kajiado"/>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kajiado"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Makadara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Makadara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">218641</Population>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Nairobi"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Nairobi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Malakisi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Malakisi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">38004</Population>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Bungoma"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Bungoma"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Mombasa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Mombasa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#County"/>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Muhoroni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Muhoroni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">145764</Population>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kisumu"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kisumu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Nairobi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Nairobi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#County"/>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#NairobiCity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#NairobiCity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#City"/>
+        <capitalCityLocation rdf:datatype="&xsd;string">1.2921ยบ S, 36.8219ยบ E</capitalCityLocation>
+        <Population rdf:datatype="&xsd;integer">3140000</Population>
+        <isCapitalOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Ngong -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Ngong">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">20657</Population>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kajiado"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kajiado"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Patongo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Patongo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">14300</Population>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Agago"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Agago"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Sirisia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Sirisia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">22703</Population>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Bungoma"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Bungoma"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Somalia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Somalia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Country"/>
+        <borders rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#SouthSudan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#SouthSudan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Country"/>
+        <borders rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kenya"/>
+        <borders rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Uganda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Starehe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Starehe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">274607</Population>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Nairobi"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Nairobi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Tanzania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Tanzania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Country"/>
+        <borders rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kenya"/>
+        <borders rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Uganda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Uganda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Uganda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Country"/>
+        <borders rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Vurra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Vurra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Town"/>
+        <Population rdf:datatype="&xsd;integer">53406</Population>
+        <isLocatedIn rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Arua"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#Arua"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

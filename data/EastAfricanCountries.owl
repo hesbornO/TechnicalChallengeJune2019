@@ -1,0 +1,437 @@
+@prefix : <http://www.semanticweb.org/acer/ontologies/2018/11/untitled-ontology-5#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries> .
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries> rdf:type owl:Ontology ;
+                                                                          
+                                                                          rdfs:comment "East African Coutries" ,
+                                                                                       """HAAR AJACH ANUER
+P15/44418/2017""" .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#isCapitalOf
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#isCapitalOf> rdf:type owl:ObjectProperty ;
+                                                                                      
+                                                                                      rdfs:domain <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#City> ;
+                                                                                      
+                                                                                      rdfs:range <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Country> .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#isPartOf
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#isPartOf> rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#location
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#location> rdf:type owl:DatatypeProperty .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#population
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#population> rdf:type owl:DatatypeProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#City
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#City> rdf:type owl:Class ;
+                                                                               
+                                                                               rdfs:subClassOf <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Place> .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Country
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Country> rdf:type owl:Class ;
+                                                                                  
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Place> .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#County
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#County> rdf:type owl:Class ;
+                                                                                 
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Place> .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Place
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Place> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> rdf:type owl:Class ;
+                                                                               
+                                                                               rdfs:subClassOf <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Place> .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Burundi
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Burundi> rdf:type owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Butiama
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Butiama> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                           owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#DRC
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#DRC> rdf:type owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Dadaab
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Dadaab> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                          owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Dar_es_Salaam
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Dar_es_Salaam> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#City> ,
+                                                                                                 owl:NamedIndividual ;
+                                                                                        
+                                                                                        <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#isCapitalOf> <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Tanzania> .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Dodoma_region
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Dodoma_region> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#County> ,
+                                                                                                 owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#El_Dera
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#El_Dera> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                           owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Eldoret
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Eldoret> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                           owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Embu_county
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Embu_county> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#County> ,
+                                                                                               owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Ethiopia
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Ethiopia> rdf:type owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Garba_Tula
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Garba_Tula> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                              owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Isiolo_county
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Isiolo_county> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#County> ,
+                                                                                                 owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Katunguru
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Katunguru> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                             owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Kenya
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Kenya> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Country> ,
+                                                                                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Kerugoya
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Kerugoya> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                            owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Kiambu_county
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Kiambu_county> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#County> ,
+                                                                                                 owl:NamedIndividual ;
+                                                                                        
+                                                                                        <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#isPartOf> <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Kenya> .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Kilimanjaro_region
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Kilimanjaro_region> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#County> ,
+                                                                                                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Kirinyaga_county
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Kirinyaga_county> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#County> ,
+                                                                                                    owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Kongwa
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Kongwa> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                          owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Machame
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Machame> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                           owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Malawi
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Malawi> rdf:type owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Manyatta
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Manyatta> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                            owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Mara_region
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Mara_region> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#County> ,
+                                                                                               owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Mbweni
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Mbweni> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                          owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Mpwapwa
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Mpwapwa> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                           owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Mugumu
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Mugumu> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                          owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Mwanza
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Mwanza> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                          owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Mwanza_region
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Mwanza_region> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#County> ,
+                                                                                                 owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Mwea
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Mwea> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Nairobi
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Nairobi> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#City> ,
+                                                                                           owl:NamedIndividual ;
+                                                                                  
+                                                                                  <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#isCapitalOf> <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Kenya> .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Pasua
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Pasua> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Ruiru
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Ruiru> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Runyenjes
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Runyenjes> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                             owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Rwanda
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Rwanda> rdf:type owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Somalia
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Somalia> rdf:type owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#South_Sudan
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#South_Sudan> rdf:type owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Tanzania
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Tanzania> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Country> ,
+                                                                                            owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Thika
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Thika> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Timboroa
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Timboroa> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                            owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Uasin_Gishu
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Uasin_Gishu> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#County> ,
+                                                                                               owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Uganda
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Uganda> rdf:type owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Wajir
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Wajir> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                         owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Wajir_county
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Wajir_county> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#County> ,
+                                                                                                owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Zambia
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Zambia> rdf:type owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Zanzibar
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Zanzibar> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Town> ,
+                                                                                            owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Zanzibarwest_region
+
+<http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#Zanzibarwest_region> rdf:type <http://www.semanticweb.org/acer/ontologies/2018/11/EastAfricanCountries#County> ,
+                                                                                                       owl:NamedIndividual .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+

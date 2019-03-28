@@ -1,0 +1,605 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-24 "http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-24="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#borders -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-24;borders">
+        <rdfs:range rdf:resource="&untitled-ontology-24;Country"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-24;Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#capitalCity -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-24;capitalCity">
+        <rdfs:domain rdf:resource="&untitled-ontology-24;City"/>
+        <rdfs:range rdf:resource="&untitled-ontology-24;Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#isLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-24;isLocatedIn">
+        <rdfs:range rdf:resource="&untitled-ontology-24;Country"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-24;County"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-24;isPartOf">
+        <rdfs:range rdf:resource="&untitled-ontology-24;County"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-24;Town"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Location -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-24;Location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Population -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-24;Population"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#City -->
+
+    <owl:Class rdf:about="&untitled-ontology-24;City">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-24;Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Country -->
+
+    <owl:Class rdf:about="&untitled-ontology-24;Country">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-24;Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#County -->
+
+    <owl:Class rdf:about="&untitled-ontology-24;County">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-24;Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Place -->
+
+    <owl:Class rdf:about="&untitled-ontology-24;Place"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Town -->
+
+    <owl:Class rdf:about="&untitled-ontology-24;Town">
+        <rdfs:subClassOf rdf:resource="&untitled-ontology-24;Place"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Addis_Ababa -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Addis_Ababa">
+        <rdf:type rdf:resource="&untitled-ontology-24;City"/>
+        <capitalCity rdf:resource="&untitled-ontology-24;Ethiopia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Adwa -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Adwa">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">40,000</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Tigray"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Afar -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Afar">
+        <rdf:type rdf:resource="&untitled-ontology-24;County"/>
+        <isLocatedIn rdf:resource="&untitled-ontology-24;Ethiopia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Arba_Minch -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Arba_Minch">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">200,000</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Gamu_Gofa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Athi_river -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Athi_river">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">80,000</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Machakos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Banissa -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Banissa">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">3,000</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Mandera"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Bedele -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Bedele">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">20,000</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Illubabor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Bonga -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Bonga">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">30,858</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Kaffa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Chemelil -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Chemelil">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">7,900</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Kisumu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Chogoria -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Chogoria">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">31,623</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Tharaka_Nithi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Chuka -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Chuka">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">19,347</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Tharaka_Nithi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Djibouti -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Djibouti">
+        <rdf:type rdf:resource="&untitled-ontology-24;Country"/>
+        <borders rdf:resource="&untitled-ontology-24;Ethiopia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Eldoret -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Eldoret">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">218,446</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Uasin_Gishu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Eritrea -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Eritrea">
+        <rdf:type rdf:resource="&untitled-ontology-24;Country"/>
+        <borders rdf:resource="&untitled-ontology-24;Ethiopia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Ethiopia -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Ethiopia">
+        <rdf:type rdf:resource="&untitled-ontology-24;Country"/>
+        <borders rdf:resource="&untitled-ontology-24;Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Gambela -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Gambela">
+        <rdf:type rdf:resource="&untitled-ontology-24;County"/>
+        <isLocatedIn rdf:resource="&untitled-ontology-24;Ethiopia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Gamu_Gofa -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Gamu_Gofa">
+        <rdf:type rdf:resource="&untitled-ontology-24;County"/>
+        <isLocatedIn rdf:resource="&untitled-ontology-24;Ethiopia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Gore -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Gore">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">13,000</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Illubabor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Illubabor -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Illubabor">
+        <rdf:type rdf:resource="&untitled-ontology-24;County"/>
+        <isLocatedIn rdf:resource="&untitled-ontology-24;Ethiopia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Itang -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Itang">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">3,600</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Gambela"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Jimma -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Jimma">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">88,867</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Kaffa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Kaffa -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Kaffa">
+        <rdf:type rdf:resource="&untitled-ontology-24;County"/>
+        <isLocatedIn rdf:resource="&untitled-ontology-24;Ethiopia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Kangundo -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Kangundo">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">13,000</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Machakos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Kaptagat -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Kaptagat">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">4,000</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Uasin_Gishu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Kenya -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Kenya">
+        <rdf:type rdf:resource="&untitled-ontology-24;Country"/>
+        <borders rdf:resource="&untitled-ontology-24;Ethiopia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Kerugoya -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Kerugoya">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">39,441</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Kirinyaga"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Kirinyaga -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Kirinyaga">
+        <rdf:type rdf:resource="&untitled-ontology-24;County"/>
+        <isLocatedIn rdf:resource="&untitled-ontology-24;Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Kisumu -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Kisumu">
+        <rdf:type rdf:resource="&untitled-ontology-24;County"/>
+        <isLocatedIn rdf:resource="&untitled-ontology-24;Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Lafey -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Lafey">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">2,000</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Mandera"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Machakos -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Machakos">
+        <rdf:type rdf:resource="&untitled-ontology-24;County"/>
+        <isLocatedIn rdf:resource="&untitled-ontology-24;Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Mandera -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Mandera">
+        <rdf:type rdf:resource="&untitled-ontology-24;County"/>
+        <isLocatedIn rdf:resource="&untitled-ontology-24;Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Maseno -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Maseno">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">65,300</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Kisumu"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Mekelle -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Mekelle">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">310,000</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Tigray"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Meti -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Meti">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">5,400</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Gambela"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Nairobi -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Nairobi">
+        <rdf:type rdf:resource="&untitled-ontology-24;City"/>
+        <capitalCity rdf:resource="&untitled-ontology-24;Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Sagana -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Sagana">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">13,000</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Kirinyaga"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Sawla -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Sawla">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">23,000</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Gamu_Gofa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Semera -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Semera">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">2,600</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Afar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Somalia -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Somalia">
+        <rdf:type rdf:resource="&untitled-ontology-24;Country"/>
+        <borders rdf:resource="&untitled-ontology-24;Ethiopia"/>
+        <borders rdf:resource="&untitled-ontology-24;Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#South_Sudan -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;South_Sudan">
+        <rdf:type rdf:resource="&untitled-ontology-24;Country"/>
+        <borders rdf:resource="&untitled-ontology-24;Ethiopia"/>
+        <borders rdf:resource="&untitled-ontology-24;Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Sudan -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Sudan">
+        <rdf:type rdf:resource="&untitled-ontology-24;Country"/>
+        <borders rdf:resource="&untitled-ontology-24;Ethiopia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Tal_Afar -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Tal_Afar">
+        <rdf:type rdf:resource="&untitled-ontology-24;Town"/>
+        <Population rdf:datatype="&xsd;integer">200,000</Population>
+        <isPartOf rdf:resource="&untitled-ontology-24;Afar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Tanzania -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Tanzania">
+        <rdf:type rdf:resource="&untitled-ontology-24;Country"/>
+        <borders rdf:resource="&untitled-ontology-24;Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Tharaka_Nithi -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Tharaka_Nithi">
+        <rdf:type rdf:resource="&untitled-ontology-24;County"/>
+        <isLocatedIn rdf:resource="&untitled-ontology-24;Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Tigray -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Tigray">
+        <rdf:type rdf:resource="&untitled-ontology-24;County"/>
+        <isLocatedIn rdf:resource="&untitled-ontology-24;Ethiopia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Uasin_Gishu -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Uasin_Gishu">
+        <rdf:type rdf:resource="&untitled-ontology-24;County"/>
+        <isLocatedIn rdf:resource="&untitled-ontology-24;Kenya"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-24#Uganda -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-24;Uganda">
+        <rdf:type rdf:resource="&untitled-ontology-24;Country"/>
+        <borders rdf:resource="&untitled-ontology-24;Kenya"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

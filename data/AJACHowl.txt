@@ -1,0 +1,48 @@
+
+
+1.
+PREFIX table: <http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#>
+SELECT  ?County ?Town  ?Population 	
+
+WHERE
+{	
+
+ ?Town table:isPartOf  ?County.		
+ ?Town table:isLocatedIn ?County.		
+ ?Town table:Population ?Population.		
+}
+ORDERBY  ?County ?Town	
+
+2.
+PREFIX table: <http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#>
+SELECT  ?Country  	
+
+WHERE
+{	
+
+ ?Country table:borders  table:Uganda.
+}
+
+3.
+PREFIX table: <http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#>
+SELECT  ?City 	
+
+WHERE
+{	
+
+ ?City table:isCapitalOf ?Country.
+}
+
+4.
+
+PREFIX table: <http://www.semanticweb.org/user/ontologies/2018/11/untitled-ontology-5#>
+SELECT  ?Town ?Population  	
+
+WHERE
+{
+?Town table:isLocatedIn ?County.
+?Town table:Population ?Population.
+}
+	
+ORDER BY(?Population)
+LIMIT 1
