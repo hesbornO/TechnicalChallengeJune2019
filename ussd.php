@@ -16,17 +16,25 @@ if ( $text == "" ) {                              //first message displayed on s
 
 	 $response  = "CON Enter Username and Email Separated by Hash \nExample: yourusername#username@mail.com";	
 
-}else if(strpos($text,'#') !== false)						  //make sure user input has # to separate the two items
+}else if(strpos($text,'#') !== false)			//make sure user input has # to separate the two items
 {
-  $split = explode("#",$text);										//user input is separated by # and stored in split variable
-  $username = $split[0];													//first value of split is the username
-  $email = $split[1];													  	//second value of split is the email
+  //user input is separated by # and stored in split variable
+  $split = explode("#",$text);					
 
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {							//email validation using in-built function
+  //first value of split is the username	
+  $username = $split[0];								
+
+  //second value of split is the email
+  $email = $split[1];											
+  
+//email validation using in-built function
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {						
 	  $response = "END Invalid email format! \nRevalidate your email \nEmail should be after hash sign.";
 	}else{
-    $response = "END Congratulations $username! You have been successfully registered.\n\n";     //registration notification   
-    $response .= "Your Details are \n Username: $username\nEmail:$email\nPhone: $phoneNumber";	  //display user details
+    //registration notification   
+    $response = "END Congratulations $username! You have been successfully registered.\n\n";     
+    //display user details
+    $response .= "Your Details are \n Username: $username\nEmail:$email\nPhone: $phoneNumber";	  
   }
 
 }
