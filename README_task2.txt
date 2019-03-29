@@ -11,10 +11,12 @@ ______________
 
 Language: PHP
 
+
 Enabling user to dial a USSD Code and get prompted for a username and email address
 after which they get an SMS response telling them they've registered successfully
 
 How to run
+Prerequisite: ensure both devices have an internet connection, the phone and the computer
 
 step 1: Start/Launch africastalking app 
 
